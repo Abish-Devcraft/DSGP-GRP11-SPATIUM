@@ -1,0 +1,7 @@
+data/
+*.zip
+*.jpg
+*.jpeg
+*.png
+.ipynb_checkpoints/
+.env

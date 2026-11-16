@@ -91,5 +91,15 @@
       "round-stools",
       "bar-chairs"
     ]
+  },
+  "agc": {
+    "tv_stand": [
+      "tv-consoles-stands-sri-lanka",
+      "floating-tv-console",
+      "standing-tv-console-stand-sri-lanka"
+    ],
+    "console_table": [
+      "console-tables"
+    ]
   }
 }

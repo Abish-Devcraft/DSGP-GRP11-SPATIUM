@@ -1,0 +1,95 @@
+{
+  "mit_indoor": {
+    "chair": "chair",
+    "swivel chair": "chair",
+    "armchair": "armchair",
+    "sofa": "sofa",
+    "couch": "sofa",
+    "bed": "bed",
+    "desk": "desk",
+    "desks": "desk",
+    "table": "table",
+    "conference table": "table",
+    "coffee table": "coffee_table",
+    "small table": "side_table",
+    "side table": "side_table",
+    "wardrobe": "wardrobe",
+    "closet": "wardrobe",
+    "dresser": "dresser",
+    "drawer": "dresser",
+    "drawers": "dresser",
+    "night table": "nightstand",
+    "nightstand": "nightstand",
+    "shelf": "bookshelf",
+    "shelves": "bookshelf",
+    "bookcase": "bookshelf",
+    "ottoman": "stool_ottoman",
+    "stool": "stool_ottoman",
+    "cabinet": "storage_cabinet",
+    "cabinets": "storage_cabinet",
+    "cupboard": "storage_cabinet",
+    "sideboard": "storage_cabinet"
+  },
+  "open_images_v7": {
+    "Nightstand": "nightstand",
+    "Desk": "desk",
+    "Bookcase": "bookshelf",
+    "Coffee table": "coffee_table",
+    "Stool": "stool_ottoman",
+    "Cupboard": "storage_cabinet",
+    "Chest of drawers": "dresser",
+    "Wardrobe": "wardrobe"
+  },
+  "ceylon_furniture": {
+    "armchair": [
+      "wing-chairs",
+      "cushion-chairs",
+      "relaxing-chairs"
+    ],
+    "chair": [
+      "dining-chairs",
+      "chairs"
+    ],
+    "sofa": [
+      "sofas"
+    ],
+    "bed": [
+      "beds"
+    ],
+    "wardrobe": [
+      "wardrobes"
+    ],
+    "dressing_table": [
+      "luxury-dressing-units",
+      "standard-dressers",
+      "dressers"
+    ],
+    "side_table": [
+      "coffee-side-tables"
+    ],
+    "coffee_table": [
+      "coffee-table"
+    ],
+    "console_table": [
+      "console-tables"
+    ],
+    "tv_stand": [
+      "tv-entertainment-units"
+    ],
+    "storage_cabinet": [
+      "side-cupboards"
+    ],
+    "desk": [
+      "study-desks",
+      "office-desks"
+    ],
+    "bookshelf": [
+      "shelves-racks"
+    ],
+    "stool_ottoman": [
+      "stools",
+      "round-stools",
+      "bar-chairs"
+    ]
+  }
+}

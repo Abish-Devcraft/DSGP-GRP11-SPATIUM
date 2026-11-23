@@ -1,0 +1,2 @@
+length_m,width_m,height_m,door_off,door_w,window_area,clearance,n_existing,existing_area,f_w,f_d,f_h,e1_x,e1_y,e1_w,e1_d,e2_x,e2_y,e2_w,e2_d,e3_x,e3_y,e3_w,e3_d,human_label
+3.6,3.0,2.7,0.5,0.9,1.4,0.6,1,0.9,2.0,0.9,0.85,2.5,1.8,1.5,0.6,0,0,0,0,0,0,0,0,1

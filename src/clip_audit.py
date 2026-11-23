@@ -89,7 +89,7 @@ np.save(OUT / "clip_embs_kept.npy", np.vstack(embs))
 kept["clip_pred"] = preds
 kept["clip_conf"] = confs
 
-# Only flag junk/disagreements on furniture items (not room_scenes)
+#only flag junk/disagreements on furniture items (not room_scenes)
 is_item = kept["role"] == "item"
 kept["is_junk"] = is_item & kept["clip_pred"].isin(junk_labels)
 kept["disagree"] = (

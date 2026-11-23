@@ -4,11 +4,11 @@ from config import OUT, final_label, CONTEXT_ONLY
 df = pd.read_csv(OUT / "inventory.csv")
 df["reason"] = ""
 
-# 1. Standardize labels using config.py
+#standardize labels using config.py
 df["label_raw"] = df["label"]
 df["label"] = df["label"].map(final_label)
 
-# Separate context images (room_scenes) from recommendable furniture items
+#separate context images (room_scenes) from recommendable furniture items
 df["role"] = "item"
 df.loc[df["label"].isin(CONTEXT_ONLY), "role"] = "context"
 
@@ -18,18 +18,18 @@ def flag(mask, why):
     df.loc[mask & (df["reason"] == ""), "reason"] = why
 
 
-# 2. Unreadable or empty files
+#unreadable or empty files
 flag(~df["ok"] | (df["kb"] == 0), "unreadable")
 good = df["ok"] & (df["kb"] > 0)
 
-# 3. Label conflicts (same picture sits in two different classes across datasets)
+#label conflicts (same picture sits in two different classes across datasets)
 lab_sha = df[good].groupby("sha")["label"].nunique()
 lab_ph = df[good].groupby("phash")["label"].nunique()
 conflict = df["sha"].isin(lab_sha[lab_sha > 1].index) | df["phash"].isin(lab_ph[lab_ph > 1].index)
 df[good & conflict].sort_values("phash").to_csv(OUT / "conflicting_labels.csv", index=False)
 flag(good & conflict, "label_conflict")
 
-# 4. Exact copies, then near-duplicates (keep largest file size first)
+#exact copies, then near-duplicates (keep largest file size first)
 df = df.sort_values("kb", ascending=False)
 good = df["ok"] & (df["kb"] > 0)
 
@@ -39,7 +39,7 @@ flag(still_ok & df[still_ok.values].duplicated("sha").reindex(df.index, fill_val
 still_ok = good & (df["reason"] == "")
 flag(still_ok & df[still_ok.values].duplicated("phash").reindex(df.index, fill_value=False), "near_duplicate")
 
-# 5. Size flags (informational only)
+#size flags (informational only)
 df["short_side"] = df[["w", "h"]].min(axis=1)
 df["small_kb"] = df["kb"] < 10
 df["tiny_px"] = df["short_side"] < 64
